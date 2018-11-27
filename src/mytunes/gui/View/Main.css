@@ -1,0 +1,28 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Dec 10, 2017, 7:46:16 PM
+*/
+#AnchorPane {
+    -fx-background-color: #fff;
+}
+
+#volume {
+    -fx-color:#B3000C;
+}
+
+.buttons1 {
+    -fx-background-color: #B3000C;
+}
+
+.buttons2 {
+    -fx-background-color: #0D5901;
+}
+
+
+
+
+

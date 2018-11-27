@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="pane" prefHeight="677.0" prefWidth="1114.0" stylesheets="@Main.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mytunes.gui.Controller.MainController">
+   <children>
+      <Slider id="volume" fx:id="volumeController" blockIncrement="0.01" layoutX="26.0" layoutY="71.0" majorTickUnit="0.1" max="1.0" minorTickCount="1" onMouseClicked="#volumeClicked" value="0.5" />
+      <ImageView fx:id="next" fitHeight="35.0" fitWidth="45.0" layoutX="130.0" layoutY="24.0" onMouseClicked="#nextArrowClicked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../images/next.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="previous" fitHeight="35.0" fitWidth="35.0" layoutX="25.0" layoutY="24.0" onMouseClicked="#previousArrowClicked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../images/previous.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="play" fitHeight="35.0" fitWidth="63.0" layoutX="78.0" layoutY="24.0" onMouseClicked="#playArrowClicked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../images/play.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="songName" alignment="CENTER" layoutX="240.0" layoutY="33.0" prefHeight="17.0" prefWidth="564.0" />
+      <TextField id="SearchField" fx:id="searchField" layoutX="850.0" layoutY="28.0" promptText="Search..." />
+      <ImageView fx:id="search" fitHeight="27.0" fitWidth="35.0" layoutX="1041.0" layoutY="28.0" onMouseClicked="#searchClicked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/search.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="playlistTableView" layoutX="30.0" layoutY="139.0" prefHeight="399.0" prefWidth="317.0">
+        <columns>
+          <TableColumn fx:id="playListColumnName" prefWidth="156.0" text="Name" />
+          <TableColumn fx:id="playListColumnSongsCount" prefWidth="56.0" text="Songs" />
+            <TableColumn fx:id="playListColumnTotalTime" minWidth="2.0" prefWidth="104.0" text="Time" />
+        </columns>
+      </TableView>
+      <ListView fx:id="playlistSongsListView" layoutX="372.0" layoutY="139.0" prefHeight="399.0" prefWidth="219.0" />
+      <TableView fx:id="songsTableView" layoutX="657.0" layoutY="139.0" prefHeight="399.0" prefWidth="411.0" AnchorPane.leftAnchor="657.0" AnchorPane.rightAnchor="45.0">
+        <columns>
+          <TableColumn fx:id="songsColumnTitle" prefWidth="166.0" text="Title" />
+          <TableColumn fx:id="songsColumArtist" prefWidth="91.0" text="Artist" />
+            <TableColumn fx:id="songsColumnCategory" prefWidth="99.0" text="Category" />
+            <TableColumn fx:id="songsColumnTime" prefWidth="54.0" text="Time" />
+        </columns>
+      </TableView>
+      <ImageView fx:id="addArrow" fitHeight="62.0" fitWidth="35.0" layoutX="608.0" layoutY="139.0" onMouseClicked="#addArrowClicked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../images/previous.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="newPlaylistButton" layoutX="37.0" layoutY="547.0" mnemonicParsing="false" onAction="#addNewPlaylistClicked" styleClass="buttons1" text="New" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font></Button>
+      <Button fx:id="editPlaylistButton" layoutX="96.0" layoutY="547.0" mnemonicParsing="false" onAction="#editPlaylistClicked" styleClass="buttons1" text="Edit" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font></Button>
+      <Button fx:id="deletePlaylistButton" layoutX="148.0" layoutY="547.0" mnemonicParsing="false" onAction="#deletePlaylistClicked" styleClass="buttons1" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font></Button>
+      <Button fx:id="deleteSongFromPlaylistButton" layoutX="464.0" layoutY="547.0" mnemonicParsing="false" onAction="#deleteSongFromPlaylistClicked" styleClass="buttons1" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font></Button>
+      <ImageView fx:id="upArrow" fitHeight="35.0" fitWidth="46.0" layoutX="372.0" layoutY="543.0" onMouseClicked="#upArrowClicked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../images/up.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="downArrow" fitHeight="35.0" fitWidth="58.0" layoutX="413.0" layoutY="543.0" onMouseClicked="#downArrowClicked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../images/down.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="newSongButton" layoutX="657.0" layoutY="547.0" mnemonicParsing="false" onAction="#addNewSongClicked" styleClass="buttons1" text="New" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font></Button>
+      <Button fx:id="editSongButton" layoutX="723.0" layoutY="547.0" mnemonicParsing="false" onAction="#editSongClicked" styleClass="buttons1" text="Edit" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font></Button>
+      <Button fx:id="closeApp" layoutX="1025.0" layoutY="618.0" mnemonicParsing="false" onAction="#closeAppClicked" styleClass="buttons2" text="Close" textFill="WHITE" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="45.0">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font></Button>
+      <Button fx:id="deleteSongButton" layoutX="785.0" layoutY="547.0" mnemonicParsing="false" onAction="#deleteSongClicked" styleClass="buttons1" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font></Button>
+      <Button fx:id="btnPlayURL" layoutX="33.0" layoutY="622.0" mnemonicParsing="false" onAction="#clickPlayURL" styleClass="buttons2" text="Play from URL" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font></Button>
+   </children>
+</AnchorPane>

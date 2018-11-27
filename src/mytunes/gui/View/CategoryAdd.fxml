@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="233.0" prefWidth="551.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mytunes.gui.Controller.CategoryAddController">
+   <children>
+      <Label layoutX="142.0" layoutY="14.0" text="Add new category">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Label>
+      <Separator layoutY="75.0" prefHeight="2.0" prefWidth="600.0" />
+      <Label layoutX="107.0" layoutY="125.0" text="Name: " />
+      <TextField fx:id="txtFieldName" layoutX="152.0" layoutY="120.0" prefHeight="31.0" prefWidth="219.0" />
+      <Button layoutX="398.0" layoutY="120.0" mnemonicParsing="false" onAction="#btnSaveClick" styleClass="buttons1" stylesheets="@Main.css" text="Save" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button layoutX="268.0" layoutY="188.0" mnemonicParsing="false" onAction="#btnCancelClick" styleClass="buttons2" stylesheets="@Main.css" text="Cancel" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+   </children>
+</AnchorPane>
